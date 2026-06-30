@@ -1,8 +1,18 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ExternalLink } from "lucide-react"
 
 import { AnimateIn } from "@/components/ui/animate-in"
 export function PortfolioSection() {
   const projects = [
+    { 
+      id: 0, 
+      title: "Aletta Scarf E-Commerce", 
+      date: "2024",
+      associated: "Full-Stack Development",
+      description: "Developed and deployed a modern full-stack e-commerce storefront for Aletta Scarf, featuring a seamless shopping experience.",
+      skills: ["Next.js", "Web Development", "Vercel"],
+      link: "https://aletta-scraf.vercel.app/"
+    },
     { 
       id: 1, 
       title: "BSI Innovation Incubation : Leap to Lead 2023", 
@@ -44,10 +54,16 @@ export function PortfolioSection() {
         <h2 className="text-3xl font-bold mb-12 text-center">My Projects & Portfolio</h2>
         <div className=" flex overflow-x-auto pb-8 -mx-6 px-6 md:mx-auto md:px-0 md:grid md:grid-cols-2 gap-8 max-w-5xl mx-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
           {projects.map((project) => (
-            <Card key={project.id} className="w-[85vw] sm:w-[60vw] md:w-auto flex-shrink-0 md:flex-shrink snap-center hover:shadow-xl hover:-translate-y-1 transition-all border-t-4 border-t-indigo-600 flex flex-col h-full">
+            <Card key={project.id} className="w-[85vw] sm:w-[60vw] md:w-auto flex-shrink-0 md:flex-shrink snap-center hover:shadow-xl hover:-translate-y-1 transition-all border-t-4 border-t-indigo-600 flex flex-col h-full relative group">
+              {project.link && (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10" aria-label={`Visit ${project.title}`}></a>
+              )}
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
-                  <CardTitle className="text-xl leading-tight">{project.title}</CardTitle>
+                  <CardTitle className="text-xl leading-tight group-hover:text-indigo-600 transition-colors flex items-center gap-2">
+                    {project.title}
+                    {project.link && <ExternalLink size={16} className="text-slate-400 group-hover:text-indigo-600 transition-colors" />}
+                  </CardTitle>
                 </div>
                 <CardDescription className="font-semibold text-indigo-600 dark:text-indigo-400">
                   {project.associated}
