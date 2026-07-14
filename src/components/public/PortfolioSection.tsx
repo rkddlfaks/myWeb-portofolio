@@ -15,6 +15,24 @@ export function PortfolioSection() {
       image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070&auto=format&fit=crop"
     },
     { 
+      id: 5, 
+      title: "Money Tracker App", 
+      date: "2024",
+      associated: "Personal Project",
+      description: "Developed a personal finance application to track daily expenses, manage budgets, and visualize financial habits with an intuitive interface.",
+      skills: ["Web Development", "React", "State Management"],
+      image: "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?q=80&w=2070&auto=format&fit=crop"
+    },
+    { 
+      id: 6, 
+      title: "Rizki Berlian", 
+      date: "2024",
+      associated: "Freelance Project",
+      description: "Designed and developed a digital presence for Rizki Berlian, focusing on an elegant user interface and seamless user experience to showcase premium products.",
+      skills: ["Web Development", "UI/UX Design", "Frontend"],
+      image: "https://images.unsplash.com/photo-1599643478524-fb66f70a00ea?q=80&w=2070&auto=format&fit=crop"
+    },
+    { 
       id: 1, 
       title: "BSI Innovation Incubation : Leap to Lead 2023", 
       date: "Nov 2023 – Jan 2024",
